@@ -1,4 +1,4 @@
-# Aditya Maurya — Modern Portfolio
+# Aditya Maurya — Portfolio
 
 A modern, responsive React + Vite portfolio for software-development applications.
 
