@@ -260,3 +260,57 @@ footer span:hover { color: var(--white); transform: translateY(-2px); }
 @media(max-width: 480px) { 
   .hero-buttons .button, .contact-buttons .button { flex: 1 1 auto; justify-content: center; } 
 }
+
+/* Custom Cursor Effects */
+body {
+  cursor: none;
+}
+.custom-cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--cyan);
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.1s ease;
+  will-change: transform;
+}
+.custom-cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: 1px solid var(--cyan-dim);
+  background-color: rgba(75, 217, 197, 0.1);
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0;
+  transition: opacity 0.3s ease, width 0.3s ease, height 0.3s ease, background-color 0.3s ease;
+  will-change: transform;
+}
+.custom-cursor.cursor-hover {
+  transform: scale(0.5) !important;
+  background-color: var(--amber);
+}
+.custom-cursor-follower.cursor-hover {
+  width: 50px;
+  height: 50px;
+  border-color: var(--amber);
+  background-color: rgba(242, 164, 87, 0.15);
+}
+
+@media(max-width: 900px) {
+  body {
+    cursor: auto;
+  }
+  .custom-cursor, .custom-cursor-follower {
+    display: none !important;
+  }
+}
+
